@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
 
+{% load my_tags %}
+
+
 {% block title %}Главная страница{% endblock %}
 
 {% block content %}
@@ -17,7 +20,7 @@
             <div class="card-body d-flex flex-column">
                 <div>
                     <h6> Категория: {{product.category}} </h6>
-                    <img src="/media/{{ product.image }}" alt="Нет изображения" style="max-width: 100%; max-height: 100%; object-fit: cover;">
+                    <img src="/media/{{ product.image | media_filter}}" alt="Нет изображения" style="max-width: 100%; max-height: 100%; object-fit: cover;">
                     <p class="card-text">Описание: {{product.description|truncatechars:100|default:"Описание отсутствует"}}</p>
                 </div>
                 <div class="mt-auto">

@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load my_tags %}
+
 {% block title %}{{product.category}}/{{product.product_name}}{% endblock %}
 
 {% block content %}
@@ -7,7 +9,7 @@
     <div class="container card shadow-sm" style="display: flex; align-items: center;">
         <h1> {{product.product_name}} </h1>
         <h6> Название: {{product.name}} </h6>
-        <img src="{{product.image}}">
+        <img src="/media/{{ product.image | media_filter}}">
         <h2>Цена - {{product.price}}</h2>
         <div class="card-body">
             <p class="card-text">Описание: {{product.description | truncatechars:100 | default:"Описание отсутствует"}}</p>
