@@ -11,7 +11,7 @@ def home(request):
 
 def contacts(request):
     if request.method == 'POST':
-        name = request.POST.get('name')
+        name = request.POST.get('name', "Пользователь")
         return HttpResponse(f"{greeting()}, {name}! Мы получили Ваше сообщение")
     return render(request, 'contacts.html')
 
