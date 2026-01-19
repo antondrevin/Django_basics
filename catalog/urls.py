@@ -8,5 +8,5 @@ app_name = CatalogConfig.name
 urlpatterns = [
     path('', views.ProductListView.as_view(), name='home'),
     path('contacts/', views.ContactsTemplateView.as_view(), name='contacts'),
-    path('product/<int:pk>/', views.ProductCardDetailView.as_view(), name='product_card'),
+    path('product/<int:pk>/', views.ProductCardDetailView.as_view(), name='blog'),
 ]
