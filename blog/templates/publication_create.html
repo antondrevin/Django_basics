@@ -5,10 +5,10 @@
 {% block content %}
 {% include 'catalog/header.html' %}
 <h2>Создание публикации</h2>
-<form method="post">
+<form method="post" enctype="multipart/form-data" >
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit" class="btn btn-secondary">Сохранить</button>
+    <button  class="btn btn-secondary" type="submit">Сохранить</button>
     <a href="{% url 'blog:publication_list' %}" class="btn btn-primary">Отмена</a>
 </form>
 

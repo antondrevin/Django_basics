@@ -8,7 +8,7 @@
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit" class="btn btn-secondary">Сохранить</button>
+    <button enctype="multipart/form-data" class="btn btn-secondary">Сохранить</button>
     <a href="{% url 'blog:publication_list' %}" class="btn btn-primary">Отмена</a>
 </form>
 
