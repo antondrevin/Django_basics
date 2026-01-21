@@ -1,8 +1,8 @@
 from pathlib import Path
 import os
 from dotenv import load_dotenv
-from django.conf.global_settings import MEDIA_URL
-from django.conf.global_settings import STATICFILES_DIRS
+# from django.conf.global_settings import MEDIA_URL
+# from django.conf.global_settings import STATICFILES_DIRS
 
 load_dotenv(override=True)
 
@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'catalog',
+    'blog'
 ]
 
 MIDDLEWARE = [
