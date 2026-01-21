@@ -30,11 +30,11 @@
                 <div class="col-1"></div>
                 <div class="col-3">
                     <div class="row" style="justify-content: space-between;">
-                        <a href="{% url 'blog:publication_edit' publication.pk %}" class="btn btn-secondary"
+                        <a href="{% url 'blog/publication_edit' publication.pk %}" class="btn btn-secondary"
                            style="margin: 3px;">Редактировать</a>
-                        <a href="{% url 'blog:publication_delete' publication.pk %}" class="btn btn-danger"
+                        <a href="{% url 'blog/publication_delete' publication.pk %}" class="btn btn-danger"
                            style="margin: 3px;">Удалить</a>
-                        <a href="{% url 'blog:publication_list' %}" class="btn btn-primary" style="margin: 3px;">Вернуться
+                        <a href="{% url 'blog/publication_list' %}" class="btn btn-primary" style="margin: 3px;">Вернуться
                             к списку</a>
                     </div>
                     <div class="col-1"></div>
